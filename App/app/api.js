@@ -3,11 +3,14 @@ import axios from "axios";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+const PLUGIN_ID1 = process.env.NEXT_PUBLIC_PLUGIN_ID1;
+const PLUGIN_ID2 = process.env.NEXT_PUBLIC_PLUGIN_ID2;
+// add plugins if necessary
 
 
 export const createChatBot = async () => {
     let data = JSON.stringify({
-        "pluginIds": ['plugin-1714851345', 'plugin-1714883192'],
+        "pluginIds": [PLUGIN_ID1, PLUGIN_ID2],
         "externalUserId": "1"
     });
 
@@ -42,7 +45,7 @@ export const getChatbotResponse = async (prompt, sessionId) => {
         "endpointId": "predefined-openai-gpt4turbo",
         "query": prompt,
         "pluginIds": [
-            "plugin-1714851345", 'plugin-1714883192'
+            PLUGIN_ID1, PLUGIN_ID2
         ],
         "responseMode": "sync"
     });
