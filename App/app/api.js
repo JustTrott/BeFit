@@ -42,7 +42,7 @@ export const createChatBot = async () => {
 export const getChatbotResponse = async (prompt, sessionId) => {
 
     let data = JSON.stringify({
-        "endpointId": "predefined-openai-gpt4turbo",
+        "endpointId": "predefined-openai-gpt4o",
         "query": prompt,
         "pluginIds": [
             PLUGIN_ID1, PLUGIN_ID2
