@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api-wrapper:
+    build:
+      context: ./NutritionAPIWrapper
+    ports:
+      - "8000:8000"
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  app:
+    build:
+      context: ./App
+    ports:
+      - "3000:3000"
+    command: npm run dev
