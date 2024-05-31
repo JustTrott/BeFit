@@ -8,12 +8,12 @@
 - App folder which contains the BeFit next.js application
 - NutritionAPIWrapper, a wrapper for the Edamam API
 
-# Installation API only
-- run command `docker compose -f docker-compose.api.yml up`
-
 # Before App Installation
 - make sure you have docker installed
-- obtain your API key and Plugin IDs from OnDemand and paste them in the .env file in the App directory
+- obtain your API key from OnDemand and paste them in the .env file in the App directory
+
+# Installation API only
+- run command `docker compose -f docker-compose.api.yml up`
 
 # Installation App + API
 
